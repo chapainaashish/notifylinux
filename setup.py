@@ -1,7 +1,7 @@
 import setuptools
 
 __author__ = "Aashish Sharma"
-__license__ = "GPL-3"
+__license__ = "GPL-3.0"
 __email__ = "ashishchapain86@gmail.com"
 
 with open("README.md", "r") as rmd:
@@ -17,7 +17,7 @@ setuptools.setup(name="notifylinux",
                  packages=setuptools.find_packages(),
                  classifiers=[
                      "Programming Language :: Python :: 3",
-                     "License :: OSI Approved :: GPL-3 license",
+                     "License :: GPL-3.0 license",
                      "Operating System :: Linux"
                  ]
                  )
