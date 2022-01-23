@@ -32,13 +32,13 @@ class Notifier():
 
     def send_notification(self):
         """Display notification"""
-        # raising error if 'notify-send' command can't be found
+        # Raising error if 'notify-send' command can't be found
         if shutil.which("notify-send") is None:
             raise SystemError(
                 "Install libnotify-bin\n run 'sudo apt-get install libnotify-bin'")
 
         else:
-            # Creating notify-send command into list
+            # Assigning notify-send command into list
             notification = ["notify-send", self.__title,
                             self.__descriptions, "-t", f"{self.__timeout * 1000}", ]
 
@@ -53,6 +53,5 @@ class Notifier():
             if self.__appname != "":
                 notification += ["-a", self.__appname]
 
-            # Executing Process
+            # Executing Processs
             subprocess.Popen(notification, shell=False)
-
