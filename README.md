@@ -1,5 +1,5 @@
 ## notifylinux
-A python package to send desktop notification in linux
+A Python package to send desktop notification in linux
 
 **To install notifylinux run**
 
