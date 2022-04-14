@@ -35,7 +35,7 @@ class Notifier():
         # Raising error if 'notify-send' command can't be found
         if shutil.which("notify-send") is None:
             raise SystemError(
-                "Install libnotify-bin\n run 'sudo apt-get install libnotify-bin'")
+                "Install libnotify-bin depending on your system\n")
 
         else:
             # Assigning notify-send command into list
@@ -49,6 +49,7 @@ class Notifier():
             # if iconpath is given
             if self.__iconpath != "":
                 notification += ["-i", self.__iconpath]
+
             # if appname is given
             if self.__appname != "":
                 notification += ["-a", self.__appname]
