@@ -1,17 +1,25 @@
 ## notifylinux
-A python package to send desktop notification in linux
+A Python package to send desktop notification in linux
 
-**To install notifylinux run**
+**Project link**
 
-```pip install notifylinux```
+```
+https://pypi.org/project/notifylinux
+```
+
+**Install notifylinux**
+
+```
+pip install notifylinux
+```
 
 **For instance**
 
 ```
 from notifylinux.linuxnotifier import Notifier
 
-notify = Notifier(title="Hello Aashish", descriptions="Welcome to Linux",
-                  iconpath="icon/help-about.svg", timeout=5, urgency="normal")
+notify = Notifier(title="Hello World", descriptions="Welcome to Linux",
+                  iconpath="icon/hello.svg", timeout=5, urgency="normal")
 notify.send_notification()
 
 

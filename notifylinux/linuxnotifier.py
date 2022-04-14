@@ -28,29 +28,37 @@ class Notifier():
             raise ValueError("Title can't be empty")
 
         if urgency not in ["normal", "low", "critical", None]:
-            raise ValueError("Inappropriate urgency given")
+            raise ValueError("Inappropriate urgency value given!")
 
     def send_notification(self):
         """Display notification"""
         # Raising error if 'notify-send' command can't be found
         if shutil.which("notify-send") is None:
             raise SystemError(
+<<<<<<< HEAD
                 "Install libnotify-bin depending on your system\n")
+=======
+                "libnotify can't be found\n Install libnotify-bin\n")
+>>>>>>> 36468948736c3b29bdd74ee396a54e46abb2a8db
 
         else:
-            # Assigning notify-send command into list
+            # Assigning 'notify-send' command into list
             notification = ["notify-send", self.__title,
                             self.__descriptions, "-t", f"{self.__timeout * 1000}", ]
 
-            # if urgency level is given
+            # If urgency level is provided
             if self.__urgency != "":
                 notification += ["-u", self.__urgency]
 
-            # if iconpath is given
+            # If iconpath is provided
             if self.__iconpath != "":
                 notification += ["-i", self.__iconpath]
+<<<<<<< HEAD
 
             # if appname is given
+=======
+            # If appname is provided
+>>>>>>> 36468948736c3b29bdd74ee396a54e46abb2a8db
             if self.__appname != "":
                 notification += ["-a", self.__appname]
 
