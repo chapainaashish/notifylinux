@@ -34,12 +34,7 @@ class Notifier():
         """Display notification"""
         # Raising error if 'notify-send' command can't be found
         if shutil.which("notify-send") is None:
-            raise SystemError(
-<<<<<<< HEAD
-                "Install libnotify-bin depending on your system\n")
-=======
-                "libnotify can't be found\n Install libnotify-bin\n")
->>>>>>> 36468948736c3b29bdd74ee396a54e46abb2a8db
+            raise SystemError("can't find libnotify-bin\n")
 
         else:
             # Assigning 'notify-send' command into list
@@ -53,12 +48,8 @@ class Notifier():
             # If iconpath is provided
             if self.__iconpath != "":
                 notification += ["-i", self.__iconpath]
-<<<<<<< HEAD
 
-            # if appname is given
-=======
             # If appname is provided
->>>>>>> 36468948736c3b29bdd74ee396a54e46abb2a8db
             if self.__appname != "":
                 notification += ["-a", self.__appname]
 
